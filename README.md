@@ -1,4 +1,4 @@
-Real-time Object Detection using YOLOv5 /n
+Real-time Object Detection using YOLOv5 
 This project demonstrates real-time object detection using a pre-trained YOLOv5 model and a live webcam feed. It serves as a foundational project for computer vision applications, showcasing the ability to process live video data and identify multiple objects within each frame.
 
 Features ✨
