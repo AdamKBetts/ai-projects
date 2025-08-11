@@ -1,0 +1,18 @@
+# Virtual environment contents
+Lib/
+Scripts/
+Include/
+pyvenv.cfg
+
+# Python-specific files
+__pycache__/
+*.pyc
+
+# PyTorch cache
+.cache/
+
+# Model checkpoints
+*.pt
+
+# OS-specific files
+.DS_Store
