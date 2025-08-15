@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Image Captioning Tool</title>
+        <style>
+            body { font-family: snas-serif; text-align: center; margin: 2em; }
+            #image-preview { max-width: 100%; max-height: 400px; margin-top: 1em; border-radius: 8px; }
+            #caption { margin-top: 1em; font-size: 1.2em; font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <h1>Image Captioning Tool</h1>
+        <p>Upload an image and let our AI generate a caption for it.</p>
+
+        <form id="upload-form">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Generate Caption</button>
+        </form>
+
+        <div id="results" style="display: none;">
+            <h2>Results</h2>
+            <img id="image-preview" src="#" alt="Image preview">
+            <p>Caption: <span id="caption"></span></p>
+        </div>
+
+        <script>
+            const form = document.getElementById('upload-form');
+            const resultsDiv = document.getElementById('results');
+            const imagePreview = document.getElementById('image-preview');
+            const captionSpan = document.getElementById('caption');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const formData = new FormData(form);
+                
+                const response = await fetch('/caption', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+                if (data.caption) {
+                    const file = form.querySelector('input[type="file"]').files[0];
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        imagePreview.src = e.target.result;
+                        resultsDiv.style.display = 'block';
+                    }
+                    reader.readAsDataURL(file);
+                    captionSpan.textContent = data.caption;
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            });
+        </script>
+    </body>
+</html>
