@@ -8,10 +8,11 @@ My projects highlight proficiency in the following areas:
 
 - **Python Programming** and **Software Development**
 - **Computer Vision** (Object Detection, Image Captioning)
-- **Natural Language Processing** (Retrieval-Augmented Generation, Fine-Tuning)
+- **Natural Language Processing** (Retrieval-Augmented Generation, Fine-Tuning, Text Summarization)
 - **Multimodal AI** (Vision-Language Models)
 - **Reinforcement Learning** (Agent-Based Systems)
-- **Model Deployment** and **MLOps** (Flask Web Apps)
+- **Data Ingestion** (Working with APIs and real-time data)
+- **Model Deployment** and **MLOps** (Flask and Streamlit Web Apps)
 - **Hugging Face Ecosystem** (Transformers, PEFT, Datasets)
 - **Git** and **GitHub** for version control
 
@@ -48,5 +49,10 @@ My projects highlight proficiency in the following areas:
 
 **Technologies:** `Gymnasium`, `Numpy`
 **Description:** An introduction to Reinforcement Learning where an AI agent learns to play a simple game from scratch using the Q-Learning algorithm.
+
+### 7. Real-time News Summarization Dashboard
+
+**Technologies:** `Streamlit`, `NewsAPI`, `Hugging Face`
+**Description:** An end-to-end AI application that fetches live news articles from a public API, performs AI-driven text summarization, and displays the results on an interactive web dashboard.
 
 ---
