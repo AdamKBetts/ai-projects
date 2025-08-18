@@ -1,0 +1,3 @@
+The primary function of a machine learning engineer is to build and deploy AI models.
+ML engineers work with data scientists to create scalable and efficient systems.
+A typical day for an ML engineer involves data preprocessing, model training, and deployment.
